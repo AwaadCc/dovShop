@@ -1,0 +1,113 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Sources
+    </ion-title>
+    <ion-buttons slot="primary">
+    <ion-button fil="clear" (click)="addSource()">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Sources</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-list inset="true">
+  <ion-item button (click)="setOpen2(true)" lines="none" color="light" style="--padding-top:10px;--padding-bottom:10px;">
+  <ion-thumbnail slot="start">
+    <img src="https://awaadcc.github.io/images/dovshop/icon.png" style="border-radius: 20%;">
+  </ion-thumbnail>
+  <ion-label>
+    <h2>dovShop Main Package</h2>
+    <p>Default Package for dovShop</p>
+  </ion-label>
+  </ion-item>
+  <ion-item-sliding *ngFor="let items of sourceList; let i = index">
+<ion-item button (click)="openModal(i)" lines="none" color="light" style="--padding-top:10px;--padding-bottom:10px;">
+  <ion-thumbnail slot="start">
+    <img src="{{items.image}}" style="border-radius: 20%;">
+  </ion-thumbnail>
+  <ion-label>
+    <h2>{{items.name}}</h2>
+    <p>{{items.desc}}</p>
+  </ion-label>
+  </ion-item>
+<ion-item-options side="end">
+<ion-item-option color="danger" (click)="showLoading2(i)">Remove</ion-item-option>
+</ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+
+<!-- Modal for default source -->
+<ion-modal [isOpen]="isModalOpen2" canDismiss="true" trigger="open-modal" (willDismiss)="onWillDismiss($event)" [initialBreakpoint]="1.0" [breakpoints]="[0, 1.0]">
+      <ng-template>
+      <ion-content>
+                <ion-fab vertical="top" horizontal="end" slot="fixed" (click)="setOpen2(false)">
+        <ion-fab-button  color="clear">
+        <ion-icon name="close-circle"></ion-icon>
+        </ion-fab-button>
+        </ion-fab>
+          <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" >Packages</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-list inset="true">
+  <ion-item *ngFor="let item of deflist" lines="none" color="light" style="--padding-top:10px;--padding-bottom:10px;">
+  <ion-thumbnail slot="start">
+    <img src="{{item.icon}}" style="border-radius: 20%;">
+  </ion-thumbnail>
+  <ion-label>
+    <h2>{{item.name}}</h2>
+    <p>{{item.desc}}</p>
+  </ion-label>
+  <ion-button class="get-button" (click)="openBrowser(item.url)" fill="solid" strong="true" shape="round" size="small" expand="full" slot="end" style="--padding-start:20px; --padding-end:20px;">Get</ion-button>
+  </ion-item>
+
+</ion-list>
+
+</ion-content>
+</ng-template>
+</ion-modal>
+
+<!-- Modal for external sources -->
+<ion-modal [isOpen]="isModalOpen" canDismiss="true" trigger="open-modal" (willDismiss)="onWillDismiss($event)" [initialBreakpoint]="1.0" [breakpoints]="[0, 1.0]">
+      <ng-template>
+      <ion-content>
+                <ion-fab vertical="top" horizontal="end" slot="fixed" (click)="setOpen(false)">
+        <ion-fab-button  color="clear">
+        <ion-icon name="close-circle"></ion-icon>
+        </ion-fab-button>
+        </ion-fab>
+          <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" >Packages</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-list inset="true">
+  <ion-item *ngFor="let items of list; let i = index" lines="none" color="light" style="--padding-top:10px;--padding-bottom:10px;">
+  <ion-thumbnail slot="start">
+    <img src="{{items.image}}" style="border-radius: 20%;">
+  </ion-thumbnail>
+  <ion-label>
+    <h2>{{items.name}}</h2>
+    <p>{{items.desc}}</p>
+  </ion-label>
+  <ion-button (click)="openBrowser(items.url)" fill="solid" strong="true" class="get-button" shape="round" size="small" expand="full" slot="end" style="--padding-start:20px; --padding-end:20px;">Get</ion-button>
+  </ion-item>
+</ion-list>
+
+</ion-content>
+</ng-template>
+</ion-modal>
+</ion-content>

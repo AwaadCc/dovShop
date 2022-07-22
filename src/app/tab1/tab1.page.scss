@@ -1,0 +1,18 @@
+.get-button {
+	--color: var(--ion-color-primary);
+	--background: var(--ion-color-light-tint);
+}
+.header {
+inner-padding-top: 30px !important;
+}
+cdk-virtual-scroll-viewport {
+  height: 100%;
+  width: 100%;
+  orientation: vertical;
+  overflow-x: scroll
+}
+.cdk-virtual-scroll-content-wrapper {
+  display: flex;
+  flex-direction: row;
+    writing-mode: vertical-lr;
+}

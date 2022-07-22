@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Search</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-searchbar [(ngModel)]="Filter" showCancelButton="focus" cancel-button-text="Cancel" spellcheck="true" autocorrect="on" showClearButton="true" debounce="100"></ion-searchbar>
+<div style="margin-right:5px;">
+  <ion-list *ngIf="notext()">
+    <ion-list-header>
+      Discover
+    </ion-list-header>
+    <ion-item style="color:var(--ion-color-primary);">
+      altStore
+    </ion-item>
+    <ion-item style="color:var(--ion-color-primary);">
+      sideloady
+    </ion-item>
+      <ion-item style="color:var(--ion-color-primary);">
+      github page
+    </ion-item>
+      <ion-item style="color:var(--ion-color-primary);">
+      dovshop website
+    </ion-item>
+  </ion-list>
+
+<ng-container *ngIf="!notext()">
+    <ion-card *ngFor="let item of deflist | filter:Filter">
+  <ion-item color="light" lines="none" style="--padding-top:10px;--padding-bottom:10px;">
+  <ion-thumbnail slot="start">
+    <img src="{{item.icon}}" style="border-radius: 20%; display:block;">
+  </ion-thumbnail>
+  <ion-label>
+    <h2>{{item.name}}</h2>
+    <p>{{item.desc}}</p>
+  </ion-label>
+  <ion-button class="get-button" (click)="openBrowser(item.url)" fill="solid" strong="true" shape="round" size="small" expand="full" slot="end" style="--padding-start:20px; --padding-end:20px;">GET</ion-button>
+  </ion-item>
+  <img src="{{item.banner}}" style="display:block;">
+</ion-card>
+  <ion-card *ngFor="let item of searchList | filter:Filter">
+  <ion-item color="light" lines="none" style="--padding-top:10px;--padding-bottom:10px;">
+  <ion-thumbnail slot="start">
+    <img src="{{item.image}}" style="border-radius: 20%; display:block;">
+  </ion-thumbnail>
+  <ion-label>
+    <h2>{{item.name}}</h2>
+    <p>{{item.desc}}</p>
+  </ion-label>
+  <ion-button class="get-button" (click)="openBrowser(item.url)" fill="solid" strong="true" shape="round" size="small" expand="full" slot="end" style="--padding-start:20px; --padding-end:20px;">GET</ion-button>
+  </ion-item>
+  <img src="{{item.searchbanner}}" style="display:block;">
+</ion-card>
+</ng-container>
+</div>
+</ion-content>

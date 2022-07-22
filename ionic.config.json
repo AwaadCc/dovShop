@@ -1,0 +1,7 @@
+{
+  "name": "dovShop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

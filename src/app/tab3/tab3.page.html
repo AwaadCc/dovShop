@@ -1,0 +1,76 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-button fil="clear" (click)="refresh()">
+      <ion-icon slot="icon-only" name="refresh-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+    <ion-title>
+      Changes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Changes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-list inset="true">
+    <ion-item lines="none" color="light" style="--padding-top:10px;--padding-bottom:10px; --border-radius:35px;">
+  <ion-thumbnail slot="start">
+    <img src="https://awaadcc.github.io/images/dovshop/icon.png" style="border-radius: 20%;">
+  </ion-thumbnail>
+  <ion-label>
+    <h2>dovShop</h2>
+    <p>Latest Version Installed</p>
+  </ion-label>
+  <ion-button fill="solid" strong="true" class="get-button" shape="round" size="small" expand="full" slot="end" style="--padding-start:20px; --padding-end:20px;" [routerLink]="['/tabs/tab1']">BROWSE</ion-button>
+  </ion-item>
+</ion-list>
+
+<ion-list *ngIf="isEmpty()" inset="true">
+  <ion-list-header color="">
+  <ion-label>Changelog</ion-label>
+</ion-list-header>
+  <ion-item color="">
+    No Recent Changes
+  </ion-item>
+</ion-list>
+
+<ng-container *ngIf="!isEmpty()">
+<ion-list>
+<ion-list-header>
+  <ion-label>Recent Changes</ion-label>
+</ion-list-header>
+  <ion-item *ngFor="let item of toplist; let i = index;">
+    <ion-avatar slot="start">
+      <img src="{{imgList[i]}}" />
+  </ion-avatar>
+    <ion-label>
+      <h1>{{item.changes}}</h1>
+      <p>{{item.name}}</p>
+      <h3>{{item.desc}}</h3> 
+    </ion-label>
+  </ion-item>
+<ion-list-header>
+  <ion-label>Older Changes</ion-label>
+</ion-list-header>
+    <ng-container *ngFor="let item of flist; let i = index;" >
+  <ion-item *ngIf="imgList[i].image">
+
+    <ion-avatar slot="start" >
+      <img src="{{imgList[i].image}}">
+    </ion-avatar>
+    <ion-label>
+      <h1>{{item.changes}}</h1>
+      <p>{{item.name}}</p>
+      <h3>{{item.desc}}</h3> 
+    </ion-label>
+  </ion-item>
+  </ng-container>
+
+</ion-list>
+</ng-container>
+</ion-content>
