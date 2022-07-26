@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1658846407399,
+  "timestamp": 1658846908317,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -119,7 +119,7 @@
     "/assets/shapes.svg": "5413e95adabcb2cb639970051f55e0ddb64ace53",
     "/common.js": "d7d01da6cb59060bafd66b4c425790c3502c6aa7",
     "/default-src_app_serve_service_ts-node_modules_swiper_angular_fesm2015_swiper_angular_mjs.js": "7a2492fee3f4e8a61c579163bf55f2bf5e0fe4ba",
-    "/index.html": "f7aece1bc2ba1f4a01f21ca883e87e9b1dd16631",
+    "/index.html": "e862e209ebaea5558497e2a6c6eec9f01eb77867",
     "/main.js": "ff49485490f64a26bbd71e685d1381fccbad10ad",
     "/manifest.webmanifest": "513f0c8d4af97aad3bdf06747883c2d3d41526a8",
     "/node_modules_ionic_core_dist_esm_index-595c1526_js.js": "54754c63525f84cd11b196444e9d4a1e88b57872",
