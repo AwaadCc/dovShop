@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1658551036515,
+  "timestamp": 1658846407399,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -119,9 +119,9 @@
     "/assets/shapes.svg": "5413e95adabcb2cb639970051f55e0ddb64ace53",
     "/common.js": "d7d01da6cb59060bafd66b4c425790c3502c6aa7",
     "/default-src_app_serve_service_ts-node_modules_swiper_angular_fesm2015_swiper_angular_mjs.js": "7a2492fee3f4e8a61c579163bf55f2bf5e0fe4ba",
-    "/index.html": "3bd5dc1b1c0459725d191ebde9c677d911938e12",
+    "/index.html": "f7aece1bc2ba1f4a01f21ca883e87e9b1dd16631",
     "/main.js": "ff49485490f64a26bbd71e685d1381fccbad10ad",
-    "/manifest.webmanifest": "a945a2617ec822f36d845b292514c9fd26c36d99",
+    "/manifest.webmanifest": "513f0c8d4af97aad3bdf06747883c2d3d41526a8",
     "/node_modules_ionic_core_dist_esm_index-595c1526_js.js": "54754c63525f84cd11b196444e9d4a1e88b57872",
     "/node_modules_ionic_core_dist_esm_input-shims-9386acc7_js.js": "8321eb8babe046e2bbaeeeaf968399e3a19f25cf",
     "/node_modules_ionic_core_dist_esm_ion-accordion_2_entry_js.js": "5a00c0dff934fee34575d4ee081a41e0e8b90a05",
