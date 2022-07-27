@@ -1,5 +1,5 @@
 # dovShop
-![icon](https://awaadcc.github.io/images/dovshop/icon.png)
+![icon](/resources/ios/icon/icon-98@2x.png)
 ## About
 dovShop is a powerful package manager for iOS devices. It is designed to help you keep all your packages organized in one neat app. The app contains a sources tab where you can install online sources that contain packages not apart of the default source. This gives you the ability to organize packages from many various sources all within one powerful manager!
 
