@@ -46,6 +46,7 @@ let ServeService = class ServeService {
   }
 
   getSourceData(str) {
+    console.log("getSourceData call made");
     return this.http.get(str);
   }
 
@@ -260,8 +261,33 @@ let Tab3Page = class Tab3Page {
     })();
   }
 
-  doRefresh() {//TODO: MAKE doRefresh()  SO DATA IS RETRIEVED FROM URL(S) AGAIN
+  doRefresh() {
+    //TODO: MAKE doRefresh()  SO DATA IS RETRIEVED FROM URL(S) AGAIN
     //      IN ORDER TO INPLEMENT REALTIME SOURCE REFRESH
+    this.storage.remove('source'); //window.location.reload();
+
+    console.log(this.urlList);
+    this.alist = [];
+    this.clist = [];
+    this.imgList = [];
+    this.toplist = [];
+    this.flist = [];
+    this.arr = [];
+
+    for (let i = 0; i < this.urlList.length; i++) {
+      this.serve.getSourceData(this.urlList[i]).subscribe(data => {
+        this.clist = data['sources'];
+        console.log(this.clist);
+        const item = this.clist[0];
+        this.arr.push(item);
+        console.log(this.arr);
+        this.storage.set('source', this.arr);
+      });
+    }
+
+    setTimeout(() => {
+      this.getData();
+    }, 1000);
   }
 
   doneRefresh() {

@@ -46,6 +46,7 @@ let ServeService = class ServeService {
   }
 
   getSourceData(str) {
+    console.log("getSourceData call made");
     return this.http.get(str);
   }
 
@@ -311,6 +312,7 @@ let Tab2Page = class Tab2Page {
         console.log(this.arr);
       }
     });
+    this.storage.get('url').then(res => console.log(res));
   }
 
   addSource() {

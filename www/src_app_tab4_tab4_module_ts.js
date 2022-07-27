@@ -46,6 +46,7 @@ let ServeService = class ServeService {
   }
 
   getSourceData(str) {
+    console.log("getSourceData call made");
     return this.http.get(str);
   }
 

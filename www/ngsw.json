@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1658846908317,
+  "timestamp": 1658943982750,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -118,7 +118,7 @@
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/assets/shapes.svg": "5413e95adabcb2cb639970051f55e0ddb64ace53",
     "/common.js": "d7d01da6cb59060bafd66b4c425790c3502c6aa7",
-    "/default-src_app_serve_service_ts-node_modules_swiper_angular_fesm2015_swiper_angular_mjs.js": "7a2492fee3f4e8a61c579163bf55f2bf5e0fe4ba",
+    "/default-src_app_serve_service_ts-node_modules_swiper_angular_fesm2015_swiper_angular_mjs.js": "458488f9c9d58776d1de8ae0731c7c9cedea4637",
     "/index.html": "e862e209ebaea5558497e2a6c6eec9f01eb77867",
     "/main.js": "ff49485490f64a26bbd71e685d1381fccbad10ad",
     "/manifest.webmanifest": "513f0c8d4af97aad3bdf06747883c2d3d41526a8",
@@ -178,10 +178,10 @@
     "/polyfills.js": "83d49a3b0f4e22b6a1348edcd27e96604e175ccc",
     "/runtime.js": "a110a1a7367d862b632f9bd8b64f10ee6028af18",
     "/src_app_appstab_appstab_module_ts.js": "65ed18eb03843628da3287a3c7535f652c85eb41",
-    "/src_app_tab1_tab1_module_ts.js": "60f156ac98c52e9f746c5269f10af9142c4a828f",
-    "/src_app_tab2_tab2_module_ts.js": "8407f5e72825e6e6da0d022268dc95b28a7f7133",
-    "/src_app_tab3_tab3_module_ts.js": "b749603cf97e8ea33c518680b5923c04420b2414",
-    "/src_app_tab4_tab4_module_ts.js": "bc6ce1118b15f1397ca0656f8bf9ceccb53cae80",
+    "/src_app_tab1_tab1_module_ts.js": "fdf9dc5efe6dd21851ce62c80fae6b7c02cba095",
+    "/src_app_tab2_tab2_module_ts.js": "cba0835578a1b99040eaf8840b7cf2ab38efe00d",
+    "/src_app_tab3_tab3_module_ts.js": "5712ce3d80de991a23f07b2797601c7368bed4bb",
+    "/src_app_tab4_tab4_module_ts.js": "d50c8f8ec52ad2729aa3217c9c81782e2a1bea9d",
     "/src_app_tabs_tabs_module_ts.js": "1ed98bb43b6f9accfe4382e18866b8af8023574d",
     "/src_app_updates_updates_module_ts.js": "b0fe787ea0de60b922809638a318e5c9e6a7a87c",
     "/styles.css": "2ec584d1664e9a68dedfbffd78a2dfe9fb4261b7",

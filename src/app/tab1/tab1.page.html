@@ -14,17 +14,18 @@
     </ion-toolbar>
   </ion-header>
 
-
 <!-- Info Card 
 style="--background: url(https://awaadcc.github.io/images/dovshop/home_info.png);""
 -->
-<ion-card id="info-modal" button="true" style="height:400px; --background: url(https://awaadcc.github.io/images/dovshop/home_info.png); ">
+<ion-card id="info-modal" button="true" style="height:300px; --background: url(https://awaadcc.github.io/images/dovshop/home_info.png); ">
 <ion-card-header>
     <ion-card-subtitle style="color:#9d9fa6;">Getting Started</ion-card-subtitle>
     <ion-card-title style="color:white;">Learn The Basics!</ion-card-title>
   </ion-card-header>
 
 </ion-card>
+
+
 
 <!-- Info Modal-->
 <ion-modal #infomodal trigger="info-modal" [initialBreakpoint]="1.0" [breakpoints]="[0, 1.0]">
@@ -126,9 +127,10 @@ Guides
 </ion-list>
 </ion-card>
 
-<!-- Hardcoded Card -->
 
-<ion-card (click)="setOpen(true)" button="true" style="height:400px; --background: url(https://awaadcc.github.io/images/dovshop/banner.jpg); ">
+ <!-- Hardcoded Card  -->
+
+<ion-card (click)="setOpen(true)" button="true" style="height:300px; --background: url(https://awaadcc.github.io/images/dovshop/banner.jpg); ">
 <ion-card-header>
     <ion-card-subtitle style="color:#9d9fa6;">Sources Info</ion-card-subtitle>
     <ion-card-title style="color:white;">Unlock it's full potential!</ion-card-title>
@@ -136,8 +138,8 @@ Guides
 
 </ion-card>
 
-<!-- Hardcoded Card Modal-->
-<ion-modal [initialBreakpoint]="1.0" [breakpoints]="[0, 1.0]" [isOpen]="isModalOpen" canDismiss="true" trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+<!-- Hardcoded Card Modal -->
+<ion-modal [initialBreakpoint]="1.0" [breakpoints]="[0, 1.0]" [isOpen]="isModalOpen" canDismiss="true" trigger="open-modal" (willDismiss)="onWillDismiss($event)" [initialBreakpoint]="1.0" [breakpoints]="[0, 1.0]">
       <ng-template>
       <ion-content>
                 <ion-fab vertical="top" horizontal="end" slot="fixed" (click)="setOpen(false)">
@@ -146,10 +148,7 @@ Guides
         </ion-fab-button>
         </ion-fab>
           <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Modal</ion-title>
 
-    </ion-toolbar>
   </ion-header>
 
 <ion-card color="light">
@@ -162,21 +161,45 @@ Guides
       Using sources is very easy!<br><br>
       1) Open the sources tab<br>
       2) Press the + icon and input a dovShop source URL<br>
-      *URL MUST BEGIN WITH http(s):// & END WITH .json 
+      *URL MUST BEGIN WITH http(s):// & END WITH .json <br>
       3) If source is valid will show up under default source<br>
       4) Source has been installed!
     </ion-text>
   </ion-card-content>
+</ion-card>
+<ion-card color="light">
+<ion-card-header>
+    <ion-card-subtitle>dovShop Sources</ion-card-subtitle>
+    <ion-card-title>How To Make</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-text>
+      To make sources please follow the template provided in the dovShop github page<br>
+      Simply follow the template and once finished upload<br>
+      onto a website.<br>
+      If you do not have a web server simply use a free hosting service<br>
+      or even simpler github pages!<br>
+      More detail can be found on the github page
+    </ion-text>
+  </ion-card-content>
+  <ion-item style="padding-bottom: 5px;" color="light" button (click)="openBrowser('https://github.com/AwaadCc/dovshop')">
+    <ion-avatar slot="start">
+      <img src="https://awaadcc.github.io/images/dovshop/icon.png" />
+    </ion-avatar>
+    Visit Github Page
+  </ion-item>
 </ion-card>
 </ion-content>
 </ng-template>
 </ion-modal>
 
 
+
+<!-- Top Apps -->
 <ion-card color="light" style="padding-bottom:20px;">
  <ion-card-header style="padding-bottom: 30px;">
-    <ion-card-subtitle>Essential Tools</ion-card-subtitle>
-    <ion-card-title>Sideloading Apps</ion-card-title>
+    <ion-card-subtitle>Trending</ion-card-subtitle>
+    <ion-card-title>Top Apps</ion-card-title>
   </ion-card-header>
 <ion-list lines="inset" *ngFor="let item of toplist"> 
   <ion-item color="light" style="--padding-bottom:10px;">
@@ -192,7 +215,6 @@ Guides
 </ion-list>
 </ion-card>
 
-
 <!-- Dynamic Cards -->
 <ion-card *ngFor="let item of cardlist;">
   <img src="{{item.banner}} " style="display:block;">
@@ -207,6 +229,9 @@ Guides
 <ion-button class="get-button" fill="solid" strong="true" shape="round" size="small" expand="full" slot="end" style="--padding-start:20px; --padding-end:20px;">GET</ion-button>
 </ion-item>
 </ion-card>
+
+
+
 <!-- All App Cards -->
 <ion-card *ngFor="let item of applist;">
   <img src="{{item.searchbanner}} " style="display:block;">

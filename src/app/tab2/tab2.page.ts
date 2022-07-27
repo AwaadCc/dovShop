@@ -145,6 +145,7 @@ export class Tab2Page {
         console.log(this.arr);
       }
     })
+    this.storage.get('url').then(res => console.log(res));
   }
 
   async addSource() {
