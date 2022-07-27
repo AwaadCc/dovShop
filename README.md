@@ -9,8 +9,8 @@ However if that is not the case due to not wanting to take up extra space for si
 
 | Name          | Link          |
 | ------------- | ------------- |
-| iPA  | Content Cell  |
-| PWA  | Content Cell  |
+| iPA  | [Install](https://github.com/AwaadCc/dovshop) |
+| PWA  | [Install](https://awaadcc.github.io/dovshop/profile.mobileconfig)  |
 
 ## Creating a source
 Download [this](https://awaadcc.github.io/dovshop/source.json) file and open it in a text editor of your choice.
