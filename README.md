@@ -7,6 +7,11 @@ dovShop is a powerful package manager for iOS devices. It is designed to help yo
 There are two main ways to install the dovShop Package manager on to your phone. If you have an Apple Developer Account or used a service such as [UDID Registrations](https://www.udidregistrations.com) and are thus able to sideload more then 3 apps please use the iPA version.
 However if that is not the case due to not wanting to take up extra space for sideloading apps there is a PWA option. The Progressive Web App is essentially a web based version of the dovShop app and works just like the iPA version. This version is preferred since it will not be counted towards the 3 apps Apple allows for normal sideloading.
 
+| Name          | Link          |
+| ------------- | ------------- |
+| iPA  | Content Cell  |
+| PWA  | Content Cell  |
+
 ## Creating a source
 Download [this](https://awaadcc.github.io/dovshop/source.json) file and open it in a text editor of your choice.
 Change the source name, desc, url, and image
