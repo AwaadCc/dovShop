@@ -8,10 +8,10 @@ There are two main ways to install the dovShop Package manager on to your phone.
 
 However if that is not the case due to not wanting to take up extra space for sideloading apps there is a PWA option. The Progressive Web App is essentially a web based version of the dovShop app and works just like the iPA version. This version is preferred since it will not be counted towards the 3 apps Apple allows for normal sideloading.
 
-| Name          | Link          |
-| ------------- | ------------- |
-| iPA  | [Install](https://github.com/AwaadCc/dovshop) |
-| PWA  | [Install](https://awaadcc.github.io/dovshop/profile.mobileconfig)  |
+| Type          | Link          | Version |
+| ------------- | ------------- | ------------- |
+| iPA  | [Install](https://github.com/AwaadCc/dovshop) | 1.0.2 |
+| PWA  | [Install](https://awaadcc.github.io/dovshop/profile.mobileconfig)  | 1.0.2 |
 
 ## Creating a source
 Download [this](https://awaadcc.github.io/dovshop/source.json) file and open it in a text editor of your choice.
