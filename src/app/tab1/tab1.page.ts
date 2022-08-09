@@ -95,7 +95,7 @@ export class Tab1Page {
   }
 
   getHomeList() {
-    return this.http.get('https://awaadcc.github.io/dovshop/home.json');
+    return this.http.get('https://wayofvod.com/dovshop/home.json');
   }
 
   openBrowser(url) {
