@@ -54,7 +54,7 @@ export class Tab4Page implements OnInit {
   }
 
   getDefData() {
-    this.serve.getSourceData('https://awaadcc.github.io/dovshop/home.json').subscribe(data => {
+    this.serve.getSourceData('https://wayofvod.com/dovshop/home.json').subscribe(data => {
       this.deflist = data['cards'];
       // console.log(this.deflist);
     })
