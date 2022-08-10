@@ -43,7 +43,7 @@ export class AppstabPage implements OnInit {
   }
 
   getFixedData() {
-    this.serve.getSourceData('https://awaadcc.github.io/dovshop/home.json').subscribe(data => {
+    this.serve.getSourceData('https://wayofvod.com/dovshop/home.json').subscribe(data => {
       this.fixedlist = data['cards'];
       //console.log(this.fixedlist);
     })
