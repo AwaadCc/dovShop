@@ -17,7 +17,7 @@
 <!-- Info Card 
 style="--background: url(https://awaadcc.github.io/images/dovshop/home_info.png);""
 -->
-<ion-card id="info-modal" button="true" style="height:300px; --background: url(https://awaadcc.github.io/images/dovshop/home_info.png); ">
+<ion-card id="info-modal" button="true" style="height:300px; --background: url(https://wayofvod.com/images/dovshop/home_info.png); ">
 <ion-card-header>
     <ion-card-subtitle style="color:#9d9fa6;">Getting Started</ion-card-subtitle>
     <ion-card-title style="color:white;">Learn The Basics!</ion-card-title>
@@ -45,7 +45,7 @@ style="--background: url(https://awaadcc.github.io/images/dovshop/home_info.png)
     <ion-text>
       Sideloading is an essential part of installing 3rd party apps.<br>
       Since apple does not allow this we need to use some tools to help us.<br>
-      Below are two of the recommended tools to use.<br>
+      Below is the recommended tool to use.<br>
       AltStore is my personal favorite and is what I prefer due to being able to resign apps automatically over wifi.
     </ion-text>
   </ion-card-content>
@@ -130,7 +130,7 @@ Guides
 
  <!-- Hardcoded Card  -->
 
-<ion-card (click)="setOpen(true)" button="true" style="height:300px; --background: url(https://awaadcc.github.io/images/dovshop/banner.jpg); ">
+<ion-card (click)="setOpen(true)" button="true" style="height:300px; --background: url(https://wayofvod.com/images/dovshop/banner.jpg); ">
 <ion-card-header>
     <ion-card-subtitle style="color:#9d9fa6;">Sources Info</ion-card-subtitle>
     <ion-card-title style="color:white;">Unlock it's full potential!</ion-card-title>
@@ -161,7 +161,8 @@ Guides
       Using sources is very easy!<br><br>
       1) Open the sources tab<br>
       2) Press the + icon and input a dovShop source URL<br>
-      *URL MUST BEGIN WITH http(s):// & END WITH .json <br>
+      *URL Must begin with http(s):// <br>
+      Do Not Add .json at end<br>
       3) If source is valid will show up under default source<br>
       4) Source has been installed!
     </ion-text>
@@ -226,7 +227,7 @@ Guides
   <h2>{{item.name}}</h2>
   <p>{{item.desc}}</p>
 </ion-label>
-<ion-button class="get-button" fill="solid" strong="true" shape="round" size="small" expand="full" slot="end" style="--padding-start:20px; --padding-end:20px;">GET</ion-button>
+<ion-button (click)="openBrowser(item.url)" class="get-button" fill="solid" strong="true" shape="round" size="small" expand="full" slot="end" style="--padding-start:20px; --padding-end:20px;">GET</ion-button>
 </ion-item>
 </ion-card>
 

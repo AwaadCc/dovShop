@@ -63,6 +63,31 @@ export class Tab3Page {
     })
   }
 
+  loadData() {
+    this.clist = [];
+    this.storage.get('source').then(res => {
+      this.alist = res;
+      
+      for(let i = 0; i<this.alist.length; i++) {
+          this.clist.push(this.alist[i]);
+          this.imgList.push(this.clist[i].image);
+          this.toplist.push(this.clist[i].changelog[1]);
+          this.flist.push(this.clist[i].changelog[0]);
+      }
+              console.log(this.alist);
+      for(let i = 0; i<this.clist.length; i++) {
+            for(let j = 2; j<this.clist[i].changelog.length; j++) {
+              this.flist.push(this.clist[i].changelog[j]);
+              //console.log(this.imgList);
+            }
+          for(let i = 0; i<this.clist.length; i++) {
+            for(let j = 2; j<this.clist[i].changelog.length; j++)
+              this.imgList.push(this.clist[i].changelog[0]);        
+          }
+        }
+    });
+  }
+
  ionViewDidEnter() {
   this.getData();
  }
@@ -85,8 +110,10 @@ export class Tab3Page {
       spinner: 'circles'
     })
     loading.present();
+    this.doRefresh();
     setTimeout(() => {
-      this.doRefresh();
+      this.loadData();
+      // console.log(this.urlList);
       this.doneRefresh();
     }, 1500)
   }
@@ -96,7 +123,7 @@ export class Tab3Page {
     //      IN ORDER TO INPLEMENT REALTIME SOURCE REFRESH
     this.storage.remove('source');
     //window.location.reload();
-    console.log(this.urlList);
+    // console.log(this.urlList);
 
     this.alist = [];
     this.clist = [];
@@ -107,18 +134,13 @@ export class Tab3Page {
     for(let i = 0; i<this.urlList.length; i++) {
       this.serve.getSourceData(this.urlList[i]).subscribe(data => {
         this.clist = data['sources'];
-        console.log(this.clist);
+        // console.log(this.clist);
         const item = <StorageItem>this.clist[0];
         this.arr.push(item);
-        console.log(this.arr);
+        // console.log(this.arr);
         this.storage.set('source', this.arr);
       })
     }
-
-    setTimeout(() => {
-          this.getData();
-        }, 1000)
-
 
   }
 
@@ -129,6 +151,7 @@ export class Tab3Page {
             text: 'Ok',
             handler: () => {
                 console.log('Confirm Ok');
+                
             }
         }]
     });

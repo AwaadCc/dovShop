@@ -47,6 +47,7 @@ export class Tab2Page {
 
   async ionViewDidLeave() {
     this.sourceList = [];
+    this.urlList = [];
   }
 
   
@@ -103,7 +104,7 @@ export class Tab2Page {
   }
 
   getDefSource() {
-    this.serve.getSourceData('https://awaadcc.github.io/dovshop/home.json').subscribe(data => {
+    this.serve.getSourceData('https://wayofvod.com/dovshop/home.json').subscribe(data => {
       this.deflist = data['topapps'];
       //console.log(this.deflist)
     })
@@ -123,12 +124,8 @@ export class Tab2Page {
     this.loadData();
     this.serve.getSourceData(str).subscribe(data => {
       this.addList = data['sources'];
-     
-      //console.log(this.addList);
       const item = <StorageItem>this.addList[0];
-      console.log("this.arr after push call");
-       this.arr.push(item);
-      console.log(this.arr);
+      this.arr.push(item);
       this.storage.set('source', this.arr);
     })
   }
@@ -141,17 +138,21 @@ export class Tab2Page {
       } else {
         this.sourceList = res;
         this.arr = res;
-        console.log("this.arr after load data call");
-        console.log(this.arr);
       }
     })
-    this.storage.get('url').then(res => console.log(res));
+    this.storage.get('url').then(res => {
+      if(!res) {
+        this.urlList = [];
+      } else {
+        this.urlList = res;
+      }
+    });
   }
 
   async addSource() {
     const alert = await this.alertController.create({
       header: 'Add Source',
-      subHeader: 'Enter dovShop Package URL',
+      subHeader: 'Enter dovShop Source URL',
       buttons: [{
             text: 'Cancel',
             role: 'cancel',
@@ -163,10 +164,11 @@ export class Tab2Page {
         {
             text: 'Ok',
             handler: (aData) => { //takes the data 
-                this.alertData = aData.source;
+                this.alertData = aData.source + '.json';
                 this.getData(this.alertData);
                 this.showLoading();
                 this.urlList.push(this.alertData);
+                console.log(this.urlList);
                 this.storage.set('url', this.urlList);
             }
         }],

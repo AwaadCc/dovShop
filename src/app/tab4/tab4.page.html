@@ -12,20 +12,20 @@
   </ion-header>
   <ion-searchbar [(ngModel)]="Filter" showCancelButton="focus" cancel-button-text="Cancel" spellcheck="true" autocorrect="on" showClearButton="true" debounce="100"></ion-searchbar>
 <div style="margin-right:5px;">
-  <ion-list *ngIf="notext()">
+  <ion-list *ngIf="notext()" >
     <ion-list-header>
       Discover
     </ion-list-header>
-    <ion-item style="color:var(--ion-color-primary);">
+    <ion-item (click)="openBrowser('https://altstore.io')" style="color:var(--ion-color-primary);">
       altStore
     </ion-item>
-    <ion-item style="color:var(--ion-color-primary);">
-      sideloady
+    <ion-item (click)="openBrowser('http://sideloadly.io')" style="color:var(--ion-color-primary);">
+      sideloadly
     </ion-item>
-      <ion-item style="color:var(--ion-color-primary);">
+      <ion-item (click)="openBrowser('https://github.com/AwaadCc')" style="color:var(--ion-color-primary);">
       github page
     </ion-item>
-      <ion-item style="color:var(--ion-color-primary);">
+      <ion-item (click)="openBrowser('https://wayofvod.com')" style="color:var(--ion-color-primary);">
       dovshop website
     </ion-item>
   </ion-list>
